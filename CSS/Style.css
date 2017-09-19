@@ -1,0 +1,176 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  position: relative;
+  /*! overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+p, h1, h2, h3, ul {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "roboto";
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: none;
+}
+
+
+/*************************
+
+Styles de page
+
+***********************/
+
+
+header {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ececec;
+}
+
+header > p {
+    flex: 2;
+    padding-left: 20px;
+
+}
+
+header > h1 {
+    flex: 3;
+    position: relative;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav {
+    height: 100%;
+    background-color: white;
+    flex: 7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+header nav ul li{
+    font-size: 18px;
+    font-family: "Open Sans";
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header nav ul li:hover{
+    background-color: #068ca5 ;/*#068ca5*/
+}
+
+header nav ul li:hover a{
+    color: #ffffff;
+}
+
+#Slider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+
+#Slider .img-slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#Slider > footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 120px;
+    background-color: rgba(6, 140, 165, 0.35);
+}
+
+#Slider .info-photo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#Slider .info-photo h2 {
+    color: white;
+    font-size: 32px;
+    font-family: "DejaVu";
+}
+
+#Slider .info-photo .lieu {
+    font-size: 18px;
+    font-family: "DejaVu";
+}
+
+#Slider .credit-photo {
+    flex: 1;
+}
+
+#Slider .bulles {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#Slider .bulles div {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+
+}
+
+#Slider .credit-photo p{
+    font-size: 14px;
+    font-family: "DejaVu";
+}
