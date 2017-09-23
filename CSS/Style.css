@@ -17,6 +17,7 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: white; /*White is selected ON PURPOSE*/
 }
 
 a, a:visited {
@@ -37,6 +38,10 @@ ul {
     list-style-type: none;
     list-style-position: none;
 }
+
+/*section {
+    max-width: 900px;
+}*/
 
 
 /*************************
@@ -206,6 +211,7 @@ header nav #menu-portfolio ul li{
 }
 
 #Slider .credit-photo p{
+    text-indent: 1px;
     font-size: 16px;
     font-family: "DejaVu";
     color: white;
@@ -461,6 +467,8 @@ header nav #menu-portfolio ul li{
 #contact iframe {
      width: 100%;
      height: 100%;
+     frameborder: 0;
+     border: none;
  }
 
 #contact .informations {
