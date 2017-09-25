@@ -12,12 +12,10 @@ html, body {
   margin: 0px;
   width: 100%;
   position: relative;
-  /*! overflow: hidden; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: white; /*White is selected ON PURPOSE*/
 }
 
 a, a:visited {
@@ -28,20 +26,16 @@ a, a:visited {
 p, h1, h2, h3, h4, ul {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     font-size: 12px;
     font-weight: normal;
-    font-family: "roboto";
+    font-family: "Roboto";
+    font-style: normal;
 }
 
 ul {
     list-style-type: none;
     list-style-position: none;
 }
-
-/*section {
-    max-width: 900px;
-}*/
 
 
 /*************************
@@ -69,12 +63,13 @@ header > p {
 header > h1 {
     flex: 3;
     position: relative;
-    left: 70px;
+    right: 30px;
     display: flex;
     flex-direction: column;
     font-family: 'Lato';
-    font-size: 28px;
+    font-size: 1.5em;
     font-weight: bold;
+    text-align: right;
 }
 
 header nav {
@@ -96,7 +91,7 @@ header nav > ul {
 }
 
 header nav > ul > li{
-    font-size: 22px;
+    font-size: 2em;
     font-family: "Open Sans";
     padding: 6px;
     padding-left: 10px;
@@ -131,20 +126,21 @@ header nav #menu-portfolio ul li{
     line-height: 50px;
     margin: 0px;
     height: 50px;
-    font-size: 14px
+    font-size: 1.5em;
     color: white;
 }
 
 #Slider {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    height: 600px;
+    flex-direction: column;
+    height: 700px;
+    overflow: hidden;
 }
 
 #Slider .img-slider {
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -173,12 +169,14 @@ header nav #menu-portfolio ul li{
 #Slider .info-photo h2 {
     color: white;
     font-size: 32px;
-    font-family: "DejaVu";
+    font-family: "Montserrat";
+    font-style: italic;
 }
 
 #Slider .info-photo .lieu {
+    width: 120%;
     font-size: 18px;
-    font-family: "DejaVu";
+    text-align: right;
 }
 
 #Slider .credit-photo {
@@ -211,7 +209,6 @@ header nav #menu-portfolio ul li{
 }
 
 #Slider .credit-photo p{
-    text-indent: 1px;
     font-size: 16px;
     font-family: "DejaVu";
     color: white;
@@ -236,7 +233,7 @@ header nav #menu-portfolio ul li{
 #apropos .citation q {
     color: #068ca5;
     font-style: italic;
-    font-size: 24px;
+    font-size: 1.3em;
     letter-spacing: 1.1px;
     line-height: 2;
 }
@@ -244,7 +241,7 @@ header nav #menu-portfolio ul li{
 #apropos .citation p {
     padding-top: 20px;
     font-size: 18px;
-
+    text-indent: 50px;
 }
 
 #apropos p < img {
@@ -263,16 +260,15 @@ header nav #menu-portfolio ul li{
 }
 
 #apropos .informations h2{
-    font-size: 34px;
+    font-size: 1.7em;
     font-weight: bold;
-    padding: 0px;
-    margin: 0px;
     display: inline;
 }
 
 #apropos .informations .texte {
-    font-size: 26px;
+    font-size: 1.2em;
     display: inline;
+    line-height: 1.7;
 }
 
 #apropos .informations .texte .expand {
@@ -281,12 +277,15 @@ header nav #menu-portfolio ul li{
 
 #apropos .informations .cv {
     font-weight: 200; /*does not work with this font*/
-    font-size: 22px;
-    font-style: italic;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-indent: 20px;
 }
 
 #apropos .informations .credit {
-    font-size: 26px;
+    font-size: 1.2em;
+    text-indent: 20px;
     color : #068ca5;
 }
 
@@ -302,11 +301,10 @@ header nav #menu-portfolio ul li{
     width: 100%;
     background-color: #e3e3e3;
     padding-left: 60px;
-    font-family: "Lato";
+    height: 85px;
+    line-height: 85px;
+    font-size: 1.7em;
     font-weight: bold;
-    height: 96px;
-    line-height: 96px;
-    font-size: 32px;
 }
 
 /*#b9b9b9*/
@@ -317,8 +315,35 @@ header nav #menu-portfolio ul li{
     border-collapse: collapse;
     margin-top: 100px;
     margin-bottom: 100px;
-    font-family: "Open Sans";
-    font-size: 1.3em;
+}
+
+#portfolio p{
+    font-size: 1.2em;
+}
+
+#portfolio th div{
+    font-size: 1.5em;
+    background-color: #068ca5;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: center;
+}
+
+#portfolio table th {
+    border: none;
+    width: 10%;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+#portfolio h4{
+    font-size: 1.5em;
+}
+
+#portfolio figcaption{
+    font-size: 1.2em;
 }
 
 #portfolio table, #portfolio td {
@@ -326,9 +351,9 @@ header nav #menu-portfolio ul li{
     margin: none;
 }
 
-#portfolio table th {
-    border-left: none;
-    width: 10%;
+#portfolio table th pre {
+    padding: 0px;
+    margin: 0px;
 }
 
 #portfolio table td {
@@ -343,17 +368,17 @@ header nav #menu-portfolio ul li{
     height: 300px;
     border-bottom: none;
     text-align: center;
-    padding: none;
+    padding: 10px;
 }
 
 #portfolio table img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 
 #portfolio table .image-cell[rowspan="2"] img {
-    width: 90%;
-    height: 180%;
+    width: 100%;
+    height: 210%;
 }
 
 #presse {
@@ -371,9 +396,9 @@ header nav #menu-portfolio ul li{
     padding-left: 60px;
     font-family: "Lato";
     font-weight: bold;
-    height: 96px;
-    line-height: 96px;
-    font-size: 32px;
+    font-size: 1.7em;
+    height: 85px;
+    line-height: 85px;
     margin-bottom: 100px;
 }
 
@@ -392,17 +417,17 @@ header nav #menu-portfolio ul li{
     border: 1px solid #b9b9b9;
 }
 
-#presse .slider article .image {
+#presse .slider article .image p {
     width: 100%;
-    height: 600px;
+    height: 500px;
+
 }
 
 #presse .slider article header {
-    position: absolute;
-    bottom: 0px;
+    position: relative;
     height: 95px;
     width: 100%;
-    background-color: rgba(6, 140, 165, 0.35);
+    background-color: rgba(6, 140, 165, 1);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -413,7 +438,7 @@ header nav #menu-portfolio ul li{
 
 #presse .slider article header h3{
     color: white;
-    font-size: 20px;
+    font-size: 1em;
     padding: none;
     margin: none;
     font-weight: bold;
@@ -453,9 +478,9 @@ header nav #menu-portfolio ul li{
     padding-left: 60px;
     font-family: "Lato";
     font-weight: bold;
-    height: 96px;
-    line-height: 96px;
-    font-size: 32px;
+    font-size: 1.7em;
+    height: 85px;
+    line-height: 85px;
     margin-bottom: 100px;
 }
 
@@ -467,8 +492,8 @@ header nav #menu-portfolio ul li{
 #contact iframe {
      width: 100%;
      height: 100%;
-     frameborder: 0;
      border: none;
+     frameborder: 0;
  }
 
 #contact .informations {
@@ -486,6 +511,15 @@ header nav #menu-portfolio ul li{
     font-family: "Lato";
     font-size: 20px;
     line-height: 1.5;
+}
+
+#contact .informations a {
+    font-family: "Lato";
+    text-decoration: underline;
+}
+
+#contact .informations a::before {
+    content:">>";
 }
 
 body footer {
