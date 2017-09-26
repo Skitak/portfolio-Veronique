@@ -1,0 +1,570 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+html[lang="fr"] q {
+  quotes: "«" "»";
+}
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+p, h1, h2, h3, h4, ul {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Roboto";
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: none;
+}
+
+
+/*************************
+
+Styles de page
+
+***********************/
+
+
+header {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ececec;
+}
+
+header > p {
+    flex: 2;
+    padding-left: 20px;
+
+}
+
+header > h1 {
+    flex: 3;
+    position: relative;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+}
+
+header nav {
+    height: 100%;
+    background-color: white;
+    flex: 7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav > ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+header nav > ul > li{
+    font-size: 2em;
+    font-family: "Open Sans";
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header nav > ul > li:hover{
+    background-color: #068ca5 ;/*#068ca5*/
+}
+
+header nav > ul > li:hover a{
+    color: #ffffff;
+}
+
+header nav #menu-portfolio ul {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 100%;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header nav #menu-portfolio:hover ul {
+    display: block;
+}
+
+header nav #menu-portfolio ul li{
+    padding: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 50px;
+    margin: 0px;
+    height: 50px;
+    font-size: 1.5em;
+    color: white;
+}
+
+#Slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    overflow: hidden;
+}
+
+#Slider .img-slider {
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+#Slider > footer {
+    display: flex;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 120px;
+    background-color: rgba(6, 140, 165, 0.35);
+}
+
+#Slider .info-photo {
+    display: flex;
+    flex: 1;
+    padding-right: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#Slider .info-photo h2 {
+    color: white;
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-style: italic;
+}
+
+#Slider .info-photo .lieu {
+    width: 120%;
+    font-size: 18px;
+    text-align: right;
+}
+
+#Slider .credit-photo {
+    flex : 1;
+    padding-left: 20px;
+}
+
+#Slider .bulles {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*margin-left: 10%;
+    margin-right: 10%;*/
+}
+
+#Slider .bulles div {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background-color: white;
+
+}
+
+#Slider .bulles div:hover{
+    background-image: url("../images/bulle-active.png");
+    border-radius: 0%;
+    background-color: rgba(0,0,0,0);
+}
+
+#Slider .credit-photo p{
+    font-size: 16px;
+    font-family: "DejaVu";
+    color: white;
+}
+
+#apropos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    height: 800px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#apropos .citation {
+    padding-right: 70px;
+    flex: 1;
+}
+
+#apropos .citation q {
+    color: #068ca5;
+    font-style: italic;
+    font-size: 1.3em;
+    letter-spacing: 1.1px;
+    line-height: 2;
+}
+
+#apropos .citation p {
+    padding-top: 20px;
+    font-size: 18px;
+    text-indent: 50px;
+}
+
+#apropos p < img {
+    flex: 1;
+}
+
+#apropos p > img {
+    border-radius: 100%;
+}
+
+#apropos .informations {
+    padding-left: 70px;
+    flex: 1;
+    font-family: "Open Sans";
+    line-height: 1.5;
+}
+
+#apropos .informations h2{
+    font-size: 1.7em;
+    font-weight: bold;
+    display: inline;
+}
+
+#apropos .informations .texte {
+    font-size: 1.2em;
+    display: inline;
+    line-height: 1.7;
+}
+
+#apropos .informations .texte .expand {
+    color : #068ca5;
+}
+
+#apropos .informations .cv {
+    font-weight: 200; /*does not work with this font*/
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-indent: 20px;
+}
+
+#apropos .informations .credit {
+    font-size: 1.2em;
+    text-indent: 20px;
+    color : #068ca5;
+}
+
+#portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#portfolio > h2 {
+    width: 100%;
+    background-color: #e3e3e3;
+    padding-left: 60px;
+    height: 85px;
+    line-height: 85px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+/*#b9b9b9*/
+
+#portfolio > table {
+    display: flex;
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#portfolio p{
+    font-size: 1.2em;
+}
+
+#portfolio th div{
+    font-size: 1.5em;
+    background-color: #068ca5;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: center;
+}
+
+#portfolio table th {
+    border: none;
+    width: 10%;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+#portfolio h4{
+    font-size: 1.5em;
+}
+
+#portfolio figcaption{
+    font-size: 1.2em;
+}
+
+#portfolio table, #portfolio td {
+    border: 1px solid #b9b9b9;
+    margin: none;
+}
+
+#portfolio table th pre {
+    padding: 0px;
+    margin: 0px;
+}
+
+#portfolio table td {
+    border-top: none;
+    padding: 20px;
+    max-width: 25%;
+}
+
+#portfolio table .image-cell {
+    border: 1px solid #b9b9b9;
+    width: 25%;
+    height: 300px;
+    border-bottom: none;
+    text-align: center;
+    padding: 10px;
+}
+
+#portfolio table img {
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio table .image-cell[rowspan="2"] img {
+    width: 100%;
+    height: 210%;
+}
+
+#presse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 100Px;
+}
+
+#presse > h2 {
+    width: 100%;
+    background-color: #e3e3e3;
+    padding-left: 60px;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 1.7em;
+    height: 85px;
+    line-height: 85px;
+    margin-bottom: 100px;
+}
+
+#presse .slider {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+#presse .slider article {
+    width: 432px;
+    height: 824px;
+    border: 1px solid #b9b9b9;
+}
+
+#presse .slider article .image p {
+    width: 100%;
+    height: 500px;
+
+}
+
+#presse .slider article header {
+    position: relative;
+    height: 95px;
+    width: 100%;
+    background-color: rgba(6, 140, 165, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10%;
+    padding-left: 20px;
+}
+
+#presse .slider article header h3{
+    color: white;
+    font-size: 1em;
+    padding: none;
+    margin: none;
+    font-weight: bold;
+    font-family: "Open Sans";
+}
+
+#presse .slider article header h4{
+    font-size: 16px;
+    padding: none;
+    margin: none;
+    font-family: "Open Sans";
+}
+
+#presse .slider article img {
+    width: 100%;
+    height: 100%;
+}
+
+#presse .slider article > p {
+    padding: 5%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#contact {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+#contact > h2 {
+    width: 100%;
+    background-color: #e3e3e3;
+    padding-left: 60px;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 1.7em;
+    height: 85px;
+    line-height: 85px;
+    margin-bottom: 100px;
+}
+
+#contact .position {
+    width: 620px;
+    height: 530px;
+}
+
+#contact iframe {
+     width: 100%;
+     height: 100%;
+     border: none;
+     frameborder: 0;
+ }
+
+#contact .informations {
+    padding-left: 100px;
+    padding-right: 200px;
+}
+
+#contact .informations h3 {
+    color: #068ca5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#contact .informations p {
+    font-family: "Lato";
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#contact .informations a {
+    font-family: "Lato";
+    text-decoration: underline;
+}
+
+#contact .informations a::before {
+    content:">>";
+}
+
+body footer {
+    background-color: #068ca5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    color: white;
+    font-size: 14px;
+    padding-left: 200px;
+    padding-right: 100px;
+    font-family: "Lato";
+    font-style: italic;
+    margin: 0px;
+}
+
+body footer code {
+    font-family: "BioRhyme";
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+    font-size: 12px;
+    background-color: #9eccd4;
+    padding: 10px;
+    color: black;
+}
+
+body .navigation-ancher {
+    box-sizing: content-box;
+    position: absolute;
+    bottom: 200px;
+    right: 150px;
+    background-color: #e5e5e5;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    -webkit-transition: padding .2s, bottom .2s, right .2s;
+    transition: padding .2s, bottom .2s, right .2s;
+}
+
+body .navigation-ancher:hover {
+    bottom: 185px;
+    right: 135px;
+    padding: 15px;
+}
