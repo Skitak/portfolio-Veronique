@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+	<meta charset="utf-8" />
+	<title>Bootstrap training</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<header >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="Assets/logo.png" alt="logo" height="50"/>
+				 Site Lambda
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+	                <li class="nav-item active">
+						<a href="#" class="nav-link">Accueil</a>
+					</li>
+	                <li class="nav-item">
+						<a href="#" class="nav-link">Produits</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Photos</a>
+					</li>
+	                <li class="nav-item">
+						<a href="#" class="nav-link">Jeu concour</a>
+					</li>
+	                <li class="nav-item">
+						<a href="#" class="nav-link">Informations</a>
+					</li>
+	            </ul>
+			</div>
+        </nav>
+    </header>
+
+    <section class="container my-5">
+		<form class="form well" method="get">
+			<div class="form-group">
+				<label for="prenom"> Prénom </label>
+				<input type="text" name="prenom" placeholder="John" class="form-control" autofocus required/>
+
+				<label for="nom"> Nom </label>
+				<input type="text" name="nomFamille" placeholder="Doe" class="form-control" required/>
+
+				<label for="login"> Login </label>
+				<input type="text" name="login" placeholder="user1234" class="form-control" required/>
+
+				<label for="mdp"> Mot de passe </label>
+				<input type="password" name="mdp" class="form-control" required/>
+
+				<label for="dateNaissance"> Date de naissance </label>
+				<input type="date" name="dateNaissance" class="form-control" required/>
+
+				<label for="mail"> Email </label>
+				<input type="email" name="mail" placeholder="your.mail@please.com" class="form-control" required/>
+			</div>
+
+
+			<div class="form-group">
+				<label for="provinces" class="form-label"> Les povinces que vous avez déjà visité</label>
+				<select multiple id="provinces" class="form-control">
+					<option value="Ontario" /> Ontario </option>
+					<option value="Quebec" /> Quebec </option>
+					<option value="Nova Scotia" /> Nova Scotia </option>
+					<option value="New Brunswick" /> New Brunswick </option>
+					<option value="Manitoba" /> Manitoba </option>
+					<option value="British Columbia" /> British Columbia </option>
+					<option value="Prince Edward island" /> Prince Edward island </option>
+					<option value="Saskatchewan" /> Saskatchewan </option>
+					<option value="Alberta" /> Alberta </option>
+					<option value="Newfoundland and Labor" /> Newfoundland and Labor </option>
+				</select>
+			</div>
+
+			<div class="form-check">
+				<label for="browser" class="form-check-label"> Quel est votre navigateur web favori ?</label>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="radio" name="browser" value="chrome" class="form-check-input"/> Google Chrome
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="radio" name="browser" value="firefox" class="form-check-input"/> Mozilla Firefox
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="radio" name="browser" value="opera" class="form-check-input"/> Opera
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="radio" name="browser" value="safari" class="form-check-input"/> Safari
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="radio" name="browser" value="explorer" class="form-check-input" disabled /> Internet explorer
+					</label>
+				</div>
+			</div>
+
+			<label for="human"> Etes vous vraiment un humain? </label>
+			<input type="checkbox" name="human" value="human" />
+			<div>
+				<input type="submit" value="Envoyer" class="btn btn-primary"/>
+				<input type="reset" value="Vider Formulaire" class="btn btn-primary"/>
+			</div>
+		</form>
+
+	</section>
+    <footer class="row container-fluid m-0" style="background-color:#828190; height:100px;">
+            <!-- ... -->
+    </footer>
+
+
+		<script src="js/jquery-slim.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
