@@ -10,36 +10,37 @@
 </head>
 
 <body>
+
 	<header >
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">
-				<img src="Assets/logo.png" alt="logo" height="50"/>
-				 Site Lambda
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    			<span class="navbar-toggler-icon"></span>
-  			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-	                <li class="nav-item active">
-						<a href="#" class="nav-link">Accueil</a>
-					</li>
-	                <li class="nav-item">
-						<a href="#" class="nav-link">Produits</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link">Photos</a>
-					</li>
-	                <li class="nav-item">
-						<a href="#" class="nav-link">Jeu concour</a>
-					</li>
-	                <li class="nav-item">
-						<a href="#" class="nav-link">Informations</a>
-					</li>
-	            </ul>
-			</div>
-        </nav>
-    </header>
+	        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">
+					<img src="Assets/logo.png" alt="logo" height="50"/>
+					 Site Lambda
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    			<span class="navbar-toggler-icon"></span>
+	  			</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+		                <li class="nav-item active">
+							<a href="#" class="nav-link">Accueil</a>
+						</li>
+		                <li class="nav-item">
+							<a href="#" class="nav-link">Produits</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Photos</a>
+						</li>
+		                <li class="nav-item">
+							<a href="#" class="nav-link">Jeu concour</a>
+						</li>
+		                <li class="nav-item">
+							<a href="#" class="nav-link">Informations</a>
+						</li>
+		            </ul>
+				</div>
+	        </nav>
+	    </header>
 
     <section class="container my-5">
 		<form class="form well" method="get">
@@ -65,10 +66,10 @@
 
 
 			<div class="form-group">
-				<label for="provinces" class="form-label"> Les povinces que vous avez déjà visité</label>
-				<select multiple id="provinces" class="form-control">
+				<label for="provinces" class="form-label"> Les provinces que vous avez déjà visitées</label>
+				<select multiple id="provinces" class="form-control" name="provinces">
 					<option value="Ontario" /> Ontario </option>
-					<option value="Quebec" /> Quebec </option>
+					<option value="Quebec" /> Québec </option>
 					<option value="Nova Scotia" /> Nova Scotia </option>
 					<option value="New Brunswick" /> New Brunswick </option>
 					<option value="Manitoba" /> Manitoba </option>
@@ -113,7 +114,7 @@
 				</div>
 			</div>
 
-			<label for="human"> Etes vous vraiment un humain? </label>
+			<label for="human"> Êtes-vous vraiment un humain? </label>
 			<input type="checkbox" name="human" value="human" />
 			<div>
 				<input type="submit" value="Envoyer" class="btn btn-primary"/>
@@ -122,10 +123,10 @@
 		</form>
 
 	</section>
-    <footer class="row container-fluid m-0" style="background-color:#828190; height:100px;">
-            <!-- ... -->
-    </footer>
 
+	<footer class="row container-fluid m-0" style="background-color:#828190; height:100px;">
+            <p>Bastien Bouquin, Véronique Ménard</p>
+    </footer>
 
 		<script src="js/jquery-slim.js"></script>
 		<script src="js/popper.js"></script>
