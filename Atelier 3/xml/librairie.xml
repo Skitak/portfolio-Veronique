@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<librairie
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="librairie.xsd" >
+	<jeu>
+		<titre>overwatch</titre>
+		<genre>fps</genre>
+		<editeur>blizzard</editeur>
+		<parution>2016-02-10</parution>
+		<note magazine="jeuxvideos.com">16</note>
+		<joueurs>30000000</joueurs>
+	</jeu>
+
+	<jeu>
+		<titre>the last of us</titre>
+		<genre>action aventure survival</genre>
+		<editeur>sony</editeur>
+		<parution>2013-11-10</parution>
+		<note magazine="steam">18</note>
+		<joueurs>6000000</joueurs>
+		<age>18</age>
+	</jeu>
+
+	<jeu>
+		<titre>hyper light drifter</titre>
+		<genre>action aventure</genre>
+		<editeur>heart machine</editeur>
+		<parution>2016-06-13</parution>
+		<note magazine="steam">18</note>
+		<note magazine="gamasutra">19</note>
+		<joueurs>600000</joueurs>
+	</jeu>
+
+	<jeu>
+		<titre>league of legends</titre>
+		<genre>moba</genre>
+		<editeur>tencent</editeur>
+		<parution>2009-03-27</parution>
+		<note magazine="TIGsource">16</note>
+		<joueurs>100000000</joueurs>
+	</jeu>
+
+</librairie>

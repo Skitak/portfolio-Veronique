@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="librairie" type="typeLibrairie"/>
+
+	<xs:complexType name="typeLibrairie">
+		<xs:sequence>
+			<xs:element name="jeu" type="typeJeu" minOccurs="4" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="typeJeu">
+		<xs:sequence>
+			<xs:element name="titre" type="xs:string" />
+			<xs:element name="genre" type="xs:string" />
+			<xs:element name="editeur" type="xs:string" />
+			<xs:element name="parution" type="xs:date" />
+			<xs:element name="note" type="typeNote" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="joueurs" type="xs:positiveInteger" />
+			<xs:element name="age" type="xs:positiveInteger" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="typeNote">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="magazine" type="xs:string" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

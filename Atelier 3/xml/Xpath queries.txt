@@ -1,0 +1,26 @@
+Lister les titres de vos jeux vidéos :
+
+	Xpath :  	/librairie/jeu/titre
+	Réponse :	overwatch
+			the last of us
+			hyper light drifter
+			league of legends
+
+Afficher l'éditeur du premier de vos jeux vidéo :
+
+	Xpath : 	/librairie/jeu[1]/editeur
+	Réponse :	blizzard
+
+Afficher le titre des jeux dont la note est supérieur à 15 :
+
+	Xpath : 	/librairie/jeu[note<=15]/titre
+	Réponse :	overwatch
+			the last of us
+			hyper light drifter
+			league of legends
+
+Afficher le titre des jeux qui sont parus en 2016 :
+
+	Xpath : 	/librairie/jeu[parution>'2016-01-01' and parution<'2016-12-31']/titre
+	Réponse :	overwatch
+			hyper light drifter

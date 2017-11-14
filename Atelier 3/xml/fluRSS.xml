@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>jeu</title>
+  <link>http://localhost</link>
+  <description>librairie de jeux</description>
+  <item>
+    <title>Overwatch</title>
+    <link>https://playoverwatch.com</link>
+    <description>Le nouveau FPS de Blizzard en vogue!</description>
+  </item>
+  <item>
+    <title>The last of us</title>
+    <link>http://www.thelastofus.playstation.com/</link>
+    <description>Un incontournable du survival horror.</description>
+  </item>
+  <item>
+    <title>Hyper Light drifter</title>
+    <link>http://www.heart-machine.com/</link>
+    <description>Un jeu indéppendant dans un style retro-arcade rafraichissant!</description>
+  </item>
+  <item>
+    <title>League of legends</title>
+    <link>http://www.leagueoflegends.com/</link>
+    <description>Le MOBA de la décénie. </description>
+  </item>
+</channel>
+
+</rss>

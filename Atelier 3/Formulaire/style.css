@@ -1,0 +1,132 @@
+* {
+	font-family: Helvetica, Arial;
+}
+
+body {
+	background-color: #505150;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+/*
+Tout champ de saisie invalide doit posséder une mise en forme CSS particulière
+permettant à l’utilisateur de le reconnaître comme invalide.
+Dès qu’il devient valide, sa mise en forme doit changer en conséquence.
+*/
+
+input:valid {
+	box-shadow: 0 0 2px 1px #899a66;
+}
+
+input:invalid{
+	box-shadow: 0 0 2px 1px #a80000;
+}
+
+.required::after {
+	content: " *";
+	color: red;
+	font-size: 20px;
+}
+
+fieldset {
+	background-color: #f7f7f7;
+	border-radius: 20px;
+	padding: 15px;
+	margin-bottom: 10px;
+	width: 400px;
+	border: none;
+}
+
+legend {
+	background-color: #899a66;
+	color: white;
+	font-size: 15px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+
+p, input {
+	font-size: 12px;
+}
+
+label {
+	display: block;
+	margin: 5px;
+	font-size: 15px;
+}
+
+input {
+	margin-bottom: 20px;
+}
+/*
+span {
+	margin-left: 20px;
+}*/
+
+button {
+	font-size: 15px;
+	padding: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+#boutons {
+	position: absolute;
+	align: center;
+
+}
+
+#boutonReset {
+	background-color: #f7f7f7;
+}
+
+#boutonEnvoi {
+	background-color: #899a66;
+	color: white;
+}
+
+#passwordIndicator {
+	height: 10px;
+	width : 100%;
+	position: relative;
+	z-index: 10;
+}
+
+.strong {
+	background-color: green
+}
+
+.medium {
+	background-color: orange;
+}
+
+.low {
+	background-color: red;
+}
+
+.right ~ div {
+	display: inline-block;
+	background-image: url("right.png");
+	width: 25px;
+	height: 25px;
+	margin-top: 5px;
+}
+
+.wrong ~ div {
+	display: inline-block;
+	background-image: url("wrong.png");
+	width: 25px;
+	height: 25px;
+	margin-top: 5px;
+}
