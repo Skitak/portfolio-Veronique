@@ -1,0 +1,34 @@
+<relation>
+	<table>
+		<tuple>
+			<Nom>Mystère</Nom>
+			<Prenom>Café</Prenom>
+			<Role>Booster</Role>
+			<Specialites>Réveiller</Specialites>
+			<Salaire>Petit : 1$50, Moyen : 1$75, Grand : 2$</Salaire>
+			<Leitmotiv>Garde à fou !</Leitmotiv>
+			<DateEmbauche>16ème siècle (ish)</DateEmbauche>
+			<Signe-distinctif>Amer</Signe-distinctif>
+		</tuple>
+		<tuple>
+			<Nom>Bouquin</Nom>
+			<Prenom>Bastien</Prenom>
+			<Role>Développeur</Role>
+			<Specialites>Web</Specialites>
+			<Salaire>100 000$</Salaire>
+			<Leitmotiv>Voyage</Leitmotiv>
+			<DateEmbauche>20 novembre 2017</DateEmbauche>
+			<Signe-distinctif>Pull bleu</Signe-distinctif>
+		</tuple>
+		<tuple>
+			<Nom>Ménard</Nom>
+			<Prenom>Véronique</Prenom>
+			<Role>Développeur</Role>
+			<Specialites>Web</Specialites>
+			<Salaire>200 000$</Salaire>
+			<Leitmotiv>Arts</Leitmotiv>
+			<DateEmbauche>20 novembre 2017</DateEmbauche>
+			<Signe-distinctif>Pull noir</Signe-distinctif>
+		</tuple>
+	</table>
+</relation>
