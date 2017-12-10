@@ -1,7 +1,16 @@
-var portfolioCarouselList;
-var portfolioCarouselSwapTime = 5000;
-var portfolioCarouselIndex = 0;
+var classList;
+var classListIndexList;
+var swapTime = 5000;
+var classListIndex = 0;
+var indexListindex = 0;
+var cellCount = 0;
+var usedCell;
+
+var interval;
+
+var windowWidth = 1920;
 $(document).ready(function(){
+	GetWindowSize();
 
 	$('#Slider').slick({
 		dots: true,
@@ -56,31 +65,33 @@ $(document).ready(function(){
 			}
 		]
   	});
+
+	$('#portfolio nav > div').on("click", function () {
+		PortfolioCarouselSwap();
+		clearInterval(interval);
+		interval = setInterval(PortfolioCarouselSwap, swapTime);
+	})
 });
 
 function createPortfolioCarousel (){
-	// var smallItems = $("#portfolio .creations .small article");
-	// var bigItem = $("#portfolio .creations .big article");
-	// var waitingItemsSmall = $("#portfolio .waiting-list .small article");
-	// var waitingItemsBig = $("#portfolio .waiting-list .big article");
-	portfolioCarouselList = CreatePortfolioCarouselList();
+	classList = CreateclassList();
 	InsertFirstTransition();
-	setInterval(PortfolioCarouselSwap, portfolioCarouselSwapTime);
+	interval = setInterval(PortfolioCarouselSwap, swapTime);
 }
 
-function CreatePortfolioCarouselList (){
+function CreateclassList (){
 	var list = new Array();
 	for (var i = 0; i < 20; i++) {
 		if (i < 4)
-			list.push(".card");
+			list.push("card");
 		else if (i < 8)
-			list.push(".fall");
+			list.push("fall");
 		else if (i < 12)
-			list.push(".overlap");
+			list.push("overlap");
 		else if (i < 16)
-			list.push(".run-you-fool");
+			list.push("run-you-fool");
 		else
-			list.push(".barell-roll");
+			list.push("barell-roll");
 	}
 	ShuffleList(list);
 	return list;
@@ -88,41 +99,85 @@ function CreatePortfolioCarouselList (){
 
 function ShuffleList ( list ){
 	for (var i = 0; i < 50; i++){
-		let firstRandomIndex = Math.floor(Math.random() * list.length);
-		let SecondRandomIndex = Math.floor(Math.random() * list.length);
-		let swap = list[firstRandomIndex];
-		list[firstRandomIndex] = list[SecondRandomIndex];
-		list[SecondRandomIndex] = swap;
+		let firstRandomclassListIndex = Math.floor(Math.random() * list.length);
+		let SecondRandomclassListIndex = Math.floor(Math.random() * list.length);
+		let swap = list[firstRandomclassListIndex];
+		list[firstRandomclassListIndex] = list[SecondRandomclassListIndex];
+		list[SecondRandomclassListIndex] = swap;
 	}
 }
 
 function PortfolioCarouselSwap () {
 	DeletePreview ();
-	//add next and add classes
+	FindCellCount();
 	AddNext();
 }
 
-function InsertFirstTransition(){
-	var currentBox = portfolioCarouselList[portfolioCarouselIndex];
-	var box = $("#portfolio .creations " + currentBox);
-	box.append($("#portfolio .waiting-list").children().first().detach());
-	box.children().first().addClass("preview");
-	box.children().last().addClass("next");
+function InsertFirstTransition() {
+	// var currentBox = classList[classListIndex];
+	// var box = $("#portfolio .creations " + currentBox);
+	// box.append($("#portfolio .waiting-list").children().first().detach());
+	// box.children().first().addClass("preview");
+	// box.children().last().addClass("next");
+	AddNext();
 }
 
-function DeletePreview (){
-	var currentBox = portfolioCarouselList[portfolioCarouselIndex];
-	var preview = $("#portfolio .creations " + currentBox);
-	preview.children().first().removeClass("preview");
-	preview.children().last().removeClass("next");
-	preview.children().first().detach().appendTo("#portfolio .waiting-list");
+function DeletePreview () {
+	var currentBox = classList[classListIndex];
+	usedCell.removeClass(currentBox);
+	usedCell.children().first().removeClass("preview");
+	usedCell.children().last().removeClass("next");
+	usedCell.children().first().detach().appendTo("#portfolio .waiting-list");
 }
 
-function AddNext (){
-	portfolioCarouselIndex = (portfolioCarouselIndex + 1) % portfolioCarouselList.length;
-	var currentBox = portfolioCarouselList[portfolioCarouselIndex];
-	var next = $("#portfolio .creations " + currentBox);
-	next.append($("#portfolio .waiting-list").children().first().detach());
-	next.children().first().addClass("preview");
-	next.children().last().addClass("next");
+function AddNext () {
+	classListIndex = (classListIndex + 1) % classList.length;
+	var currentBox = classList[classListIndex];
+	GetRandomContainer();
+	usedCell.addClass(currentBox);
+	usedCell.append($("#portfolio .waiting-list").children().first().detach());
+	usedCell.children().first().addClass("preview");
+	usedCell.children().last().addClass("next");
 }
+
+function GetRandomContainer () {
+	indexListindex = Math.floor(Math.random() * cellCount);
+	switch (indexListindex) {
+		case 0:
+			usedCell = $("#portfolio .creations .left .small-creation-container").first();
+			break;
+		case 1:
+			usedCell = $("#portfolio .creations .left .small-creation-container").last();
+			break;
+		case 2:
+			usedCell = $("#portfolio .creations .right .small-creation-container").first();
+			break;
+		case 3:
+			usedCell = $("#portfolio .creations .right .small-creation-container").last();
+			break;
+		case 4:
+			usedCell = $("#portfolio .creations .left + div");
+			break;
+		default:
+
+	}
+}
+
+function FindCellCount() {
+	if (windowWidth >= 1560)
+		cellCount = 5;
+	else if (windowWidth >= 1130)
+		cellCount = 4;
+	else if (windowWidth >= 700)
+		cellCount = 2;
+	else
+		cellCount = 1;
+}
+
+function GetWindowSize() {
+    windowWidth = $(window).width();
+}
+
+$(window).resize(function() {
+  	GetWindowSize();
+});
