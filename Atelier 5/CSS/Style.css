@@ -54,7 +54,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    background-color: white;
+    background-color: #ececec;
 }
 
 header .logo {
@@ -63,14 +63,12 @@ header .logo {
   flex: 5;
   width: 100%;
   height: 140px;
-  min-width: 520px;
+  /*min-width: 520px;*/
   justify-content: space-between;
   align-items: center;
-  background-color: #ececec;
 }
 
 header .logo > p {
-  align-self:
     flex: 2;
     padding-left: 20px;
 }
@@ -96,6 +94,43 @@ header nav {
     justify-content: center;
     align-items: center;
 }
+
+header .button {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	margin-right: 15px;
+}
+
+header .button .central-bar {
+	width: 60px;
+	height: 5px;
+	background-color: black;
+}
+
+header .button::before {
+	content: '';
+	position: absolute;
+	width: 60px;
+	height: 5px;
+	background-color: black;
+	top: 0px;
+	z-index: 5;
+}
+
+header .button::after {
+	content: '';
+	position: absolute;
+	width: 60px;
+	height: 5px;
+	background-color: black;
+	bottom: 0px;
+}
+
 
 header nav > ul {
     width: 70%;
@@ -141,7 +176,7 @@ header nav #menu-portfolio ul li{
     color: white;
 	transition: all .25s ease-in-out;
 	opacity: 0;
-	visibility: hidden;
+	display: none;
 }
 
 header nav #menu-portfolio ul li:nth-child(even){
@@ -151,7 +186,6 @@ header nav #menu-portfolio ul li:nth-child(even){
 header nav #menu-portfolio ul li:nth-child(odd){
     transform: translate(-30px, 0px);
 }
-
 
 header nav #menu-portfolio:hover ul li{
     transform: translate(0px, 0px);
@@ -185,6 +219,8 @@ header nav #menu-portfolio:hover ul li:hover{
 		display: none;
 	}
 }
+
+
 
 #Slider article{
 	width: 100%;
@@ -363,6 +399,56 @@ header nav #menu-portfolio:hover ul li:hover{
     font-size: 1.2em;
     text-indent: 20px;
     color : #068ca5;
+}
+
+@media screen and (max-width: 550px) {
+	header {
+		justify-content: space-around;
+	}
+
+	header .logo {
+	    width: auto;
+		height: 100px;
+	}
+
+	header .logo {
+	    width: auto;
+	}
+
+	header .logo img {
+		width : 200;
+		height: 75px;
+	}
+
+	header .button {
+		display: flex;
+	}
+
+	header .logo h1 {
+		display: none;
+	}
+	
+	header nav ul{
+		/*display: none;*/
+		flex-direction: column;
+		min-width: 300px;
+		width: 100%;
+		background-color: #ececec;
+
+	}
+
+	#apropos p > img {
+	    margin: 70px;
+	    margin-bottom: 0px;
+	    border-radius: 100%;
+		width: 300px;
+		height: 300px;
+	    flex: 1;
+	}
+
+	#apropos .informations {
+	    min-width: 200px;
+	}
 }
 
 #portfolio {
@@ -829,6 +915,26 @@ header nav #menu-portfolio:hover ul li:hover{
 	}
 }
 
+@media screen and (max-width : 550px){
+	#presse .slider {
+		width: 300px;
+	}
+	#presse .slider  article {
+	    width: 300px;
+	    min-height: 824px;
+	    border: 1px solid #b9b9b9;
+	}
+
+	#presse .slider .slick-slide {
+		width: 300px;
+
+	}
+
+	#presse .slider .slick-list {
+		margin-left: 0px;
+	}
+}
+
 #contact {
     width: 100%;
     display: flex;
@@ -894,7 +1000,7 @@ body footer {
     background-color: #068ca5;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 75px;
@@ -924,6 +1030,22 @@ body .navigation-ancher:hover {
     bottom: 185px;
     right: 135px;
     padding: 15px;
+}
+
+@media screen and (max-width: 700px) {
+	#contact .informations {
+	    padding: 5px;
+	}
+	body .navigation-ancher {
+		display: none;
+	}
+	body footer {
+		padding: 0px;
+	}
+
+	body footer p {
+		padding: 5px;
+	}
 }
 
 

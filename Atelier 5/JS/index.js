@@ -30,6 +30,7 @@ $(document).ready(function(){
     	slidesToShow: 3,
     	slidesToScroll: 3,
 		variableWidth: true,
+		autoplay: false,
 		prevArrow: '<button type="button" class="arrow left"><div class="arrow-bubble"></div></button>',
 		nextArrow: '<button type="button" class="arrow right"><div class="arrow-bubble"></div></button>',
 		responsive : [
@@ -50,7 +51,8 @@ $(document).ready(function(){
 			    	slidesToScroll: 1,
         			infinite: true,
 					arrows: false,
-        			dots: false
+					autoplay: true,
+        			dots: true
 				}
 			},
 		    {
@@ -59,8 +61,9 @@ $(document).ready(function(){
 		      		slidesToShow: 1,
 			    	slidesToScroll: 1,
         			infinite: true,
+					autoplay: true,
 					arrows: false,
-        			dots: false
+        			dots: true
 				}
 			}
 		]
