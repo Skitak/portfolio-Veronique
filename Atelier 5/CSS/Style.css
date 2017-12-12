@@ -382,8 +382,9 @@ header nav #menu-portfolio:hover ul li:hover{
     display: flex;
     flex-direction: row;
     align-items :flex-start;
-    justify-content: space-between;
-	flex-wrap: nowrap;
+	align-content : space-around;
+    justify-content: center;
+	flex-wrap: wrap;
     width: 100%;
     max-width: 100%;
     padding-left: 5%;
@@ -434,6 +435,7 @@ header nav #menu-portfolio:hover ul li:hover{
 }
 
 #apropos .informations .texte {
+	min-width: 300px;
     font-size: 1em;
     display: inline;
     line-height: 1.7;
