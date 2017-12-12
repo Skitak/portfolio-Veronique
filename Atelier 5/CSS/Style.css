@@ -382,7 +382,7 @@ header nav #menu-portfolio:hover ul li:hover{
     display: flex;
     flex-direction: row;
     align-items :flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
 	flex-wrap: nowrap;
     width: 100%;
     max-width: 100%;
@@ -394,6 +394,7 @@ header nav #menu-portfolio:hover ul li:hover{
 #apropos .citation {
     min-width: 300px;
     max-width: 700px;
+	flex: 1;
 }
 
 #apropos .citation q {
@@ -418,6 +419,7 @@ header nav #menu-portfolio:hover ul li:hover{
 }
 
 #apropos .informations {
+	flex: 1;
     margin-bottom: 70px;
     min-width: 300px;
     flex: 1;
