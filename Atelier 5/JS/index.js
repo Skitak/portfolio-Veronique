@@ -10,6 +10,9 @@ var interval;
 
 var windowWidth = 1920;
 $(document).ready(function(){
+	$("header .button").on ("click", function() {
+		$("header").toggleClass("active");
+	});
 	GetWindowSize();
 
 	$('#Slider').slick({
@@ -18,7 +21,19 @@ $(document).ready(function(){
   		infinite: true,
     	slidesToShow: 1,
     	slidesToScroll: 1,
-		dotsClass : 'bulles'
+		dotsClass : 'bulles',
+  		adaptiveHeight: true,
+		responsive : [
+			{
+				breakpoint: 1000,
+      			settings: {
+        			slidesToShow: 1,
+			    	slidesToScroll: 1,
+        			infinite: true,
+					arrows: false,
+					dotsClass : 'slick-dots'
+      			}
+    		}]
   	});
 
 	createPortfolioCarousel();
